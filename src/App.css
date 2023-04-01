@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.NavBar{
+  background-color: rgb(13, 40, 53);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  justify-content: space-around;
+  color: white;
+}
+.Imagen{
+  width: 300px;
+  position: absolute;
+  margin-top: -90px;
+}
+
+.Breadcrumb{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.Phone{
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  margin: 20px;
+}
