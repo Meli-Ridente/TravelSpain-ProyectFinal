@@ -1,40 +1,51 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Home.module.scss';
+import { Header } from '../Header';
+import {  Dropdown, Space  } from 'antd';
+import { DownOutlined, SmileOutlined, PhoneOutlined } from '@ant-design/icons';
 import img from '../../assets/img.png'
-import { Breadcrumb,Carousel  } from 'antd';
+import DondeirPage  from '../../Pages/DondeirPage'
+import QueHacerPage from '../../Pages/QueHacerPage'
 
-const Home = () => {
-
+export const Home = () => {
+  const items = [
+    {
+      key: '1',
+      label: (
+        <DondeirPage />
+      ),
+    },
+    {
+      key: '2',
+      label: (
+        <QueHacerPage />
+      ),
+    },
+  ]
   return (
     <div className={styles.Home}>
-      <Breadcrumb className='Breadcrumb'
-          separator=">"
-          items={[
-            {
-              title: 'Home',
-              href: '/'
-            },
-            {
-              title: 'Vuelos',
-              href: '/vuelos',
-            },
-            {
-              title: 'Cruceros',
-              href: '/vuelos',
-            },
-            {
-              title: 'Dónde ir',
-              href: '/cruceros'
-            },
-          ]}
-        />
-        <img src={img} className={styles.Img}/>
-       
-    
-    </div> 
+      <Dropdown
+        menu={{
+          items,
+        }} className={styles.DivDropdown}
+        >
+        <div>
+          <Space style={{fontSize: '18px', margin: '7px'}}>
+            Dónde ir
+            <DownOutlined />
+          </Space>
+          <Space style={{fontSize: '18px', margin: '7px'}}>
+            Qué hacer
+            <DownOutlined />
+          </Space>
+        </div>
+      </Dropdown>
+      <img src={img} className='Img'/>
+      
+    </div>
   )
-};
+}
 
 Home.propTypes = {};
 

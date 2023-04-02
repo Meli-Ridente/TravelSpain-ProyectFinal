@@ -1,0 +1,23 @@
+{
+  "vuelos": [
+    { "id": 1, "title": "Madrid", "date": "20/4/2023", "price": "150€","img1": "https://media.vogue.mx/photos/5c070fa0676a2333766f1cc9/1:1/w_2575,h_2575,c_limit/madrid_212.jpg"},
+    { "id": 2, "title": "Barcelona", "date": "20/5/2023", "price": "150€", "img1": "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/02/16/16765451516678.jpg"},
+    { "id": 3, "title": "Valencia", "date": "20/6/2023", "price": "250€", "img2": "https://img2.rtve.es/i/?w=1600&i=1602241477802.jpg"},
+    { "id": 4, "title": "Sevilla", "date": "20/7/2023", "price": "280€", "img1": "https://st3.depositphotos.com/1053932/13101/i/600/depositphotos_131016536-stock-photo-seville-sevilla-plaza-de-espana.jpg"},
+    { "id": 5, "title": "Zaragoza", "date": "20/8/2023", "price": "180€", "img1": "https://fotografias.larazon.es/clipping/cmsimages02/2021/02/20/6267A389-99C6-4C08-8E84-2FEB40294BFD/69.jpg?crop=1600,900,x0,y83&width=1280&height=720&optimize=low&format=webply"},
+    { "id": 6, "title": "Málaga", "date": "20/9/2023", "price": "70€", "img1": "https://static.visitacostadelsol.com/visitacostadelsol/subidas/imagenes/8/6/arc_17468_g.png"},
+    { "id": 7, "title": "Bilbao", "date": "20/10/2023", "price": "110€", "img1": "https://www.autopista.es/uploads/s1/11/47/61/63/fantastica-panoramica-de-la-ciudad-de-bilbao.jpeg"},
+    { "id": 8, "title": "Santiago de Compostela", "date": "20/11/2023", "price": "214€", "img1": "https://images.squarespace-cdn.com/content/v1/5a86b05bcf81e0af04936cc7/1647202169084-N27PZELVGYBG4WX19KQK/que-ver-en-santiago-de-compostela.jpg?format=1500w"},
+    { "id": 9, "title": "Salamanca", "date": "20/12/2023", "price": "95€", "img1": "https://upload.wikimedia.org/wikipedia/commons/0/04/Reflejos_de_la_Catedrales_de_Salamanca.jpg"},
+    { "id": 10, "title": "Santander", "date": "20/1/2024", "price": "60€", "img1": "https://www.iberian-escapes.com/images/santander-city.jpg"},
+    { "id": 11, "title": "Cáceres", "date": "20/2/2024", "price": "65€", "img1": "https://viajes.nationalgeographic.com.es/medio/2023/03/21/caceres_ae8e1bbc_640227486_230321131232_2000x1333.jpg"},
+    { "id": 12, "title": "Islas Canarias", "date": "20/3/2024", "price": "300€", "img1": "https://www.gilmar.es/wp-content/uploads/2022/04/mejores-zonas-vivir-islas-canarias.jpg"},
+    { "id": 13, "title": "Islas Baleares", "date": "20/4/2024", "price": "300€", "img1": "https://www.civitatis.com/f/zonas/baleares/baleares.jpg"},
+    { "id": 13, "title": "Toledo", "date": "20/5/2024", "price": "140€", "img1": "https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/blt0226ba91bb9ef16e/6035d8e46217f744c110355a/ES_Toledo_ES_Header.jpg?width=1680&quality=70&auto=webp"}
+    
+  ],
+  "cruceros": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
