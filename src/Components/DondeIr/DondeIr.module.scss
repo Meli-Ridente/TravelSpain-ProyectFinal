@@ -1,0 +1,23 @@
+.DondeIr {
+  .Linea{
+    height: 5%;
+    width: 5%;
+    background-color: rgb(13, 40, 53);
+    margin-left: -24%;
+  }
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .ContainerUls{
+    margin-top: 2%;
+    font-size: 20px;
+    padding: 0 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: justify;
+  }
+}

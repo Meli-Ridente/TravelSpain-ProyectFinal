@@ -1,0 +1,26 @@
+.QueHacer {
+  display: flex;
+  margin-top: 5%;
+  text-align: start;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 18%;
+  padding: 3%;
+  background-color: rgb(233, 233, 233);
+  width: 58%;
+  .ContainerQueHacer{
+    .Linea{
+      height: 5%;
+      width: 5%;
+      background-color: rgb(13, 40, 53);
+      margin-left: -24%;
+      }
+  }
+  .ImgsContainer{
+    margin-top: 4%;
+    display: flex;
+    align-content: space-around;
+    
+  }
+  
+}

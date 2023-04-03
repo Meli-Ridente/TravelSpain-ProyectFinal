@@ -37,6 +37,14 @@
   }
 }
 
+.AppContainer{
+  display: flex;
+}
+
+.ContainerHeader{
+  height: 300px;
+}
+
 .NavBar{
   background-color: rgb(13, 40, 53);
   display: flex;
@@ -48,7 +56,6 @@
 }
 .Imagen{
   width: 300px;
-  position: absolute;
   margin-top: -90px;
 }
 
@@ -63,4 +70,11 @@
   justify-content: baseline;
   align-items: center;
   margin: 20px;
+}
+
+.Links{
+  display: flex;  
+  width: 100px;
+  flex-direction: column;
+  justify-content: flex-start;
 }

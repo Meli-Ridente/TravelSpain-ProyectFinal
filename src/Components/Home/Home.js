@@ -1,47 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import styles from './Home.module.scss';
-import { Header } from '../Header';
-import {  Dropdown, Space  } from 'antd';
-import { DownOutlined, SmileOutlined, PhoneOutlined } from '@ant-design/icons';
 import img from '../../assets/img.png'
 import DondeirPage  from '../../Pages/DondeirPage'
 import QueHacerPage from '../../Pages/QueHacerPage'
+import {DownOutlined} from '@ant-design/icons'
 
 export const Home = () => {
-  const items = [
-    {
-      key: '1',
-      label: (
-        <DondeirPage />
-      ),
-    },
-    {
-      key: '2',
-      label: (
-        <QueHacerPage />
-      ),
-    },
-  ]
+
+  const [isVisibleDondeIr, setIsVisibleDondeIr] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
+ 
   return (
     <div className={styles.Home}>
-      <Dropdown
-        menu={{
-          items,
-        }} className={styles.DivDropdown}
-        >
-        <div>
-          <Space style={{fontSize: '18px', margin: '7px'}}>
-            Dónde ir
-            <DownOutlined />
-          </Space>
-          <Space style={{fontSize: '18px', margin: '7px'}}>
-            Qué hacer
-            <DownOutlined />
-          </Space>
+        <div className={styles.ContainerUl}>
+          <ul>
+            <li onClick={() => setIsVisibleDondeIr(!isVisibleDondeIr)}>
+              <p>Dónde ir <DownOutlined className={styles.Down} /></p>
+              <DondeirPage isVisible={isVisibleDondeIr}/>
+            </li>
+          </ul> 
+          <ul>
+            <li>
+              <p>Qué hacer <DownOutlined className={styles.Down}/>
+              <QueHacerPage />
+              </p>
+            </li>
+          </ul>
         </div>
-      </Dropdown>
-      <img src={img} className='Img'/>
+        <img src={img} className={styles.Img}/>
+      
       
     </div>
   )

@@ -1,8 +1,10 @@
 import React from 'react'
-
+import QueHacer from '../Components/QueHacer/QueHacer'
 const QueHacerPage = () => {
   return (
-    <div>QueHacerPage</div>
+    <div>
+      <QueHacer />
+    </div>
   )
 }
 

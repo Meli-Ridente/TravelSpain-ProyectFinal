@@ -1,7 +1,25 @@
 .Home {
+  .ContainerUl{
+    margin-right: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    li{
+      list-style:circle;
+      .Down:hover{
+        color: red;
+        display: inline;
+      }
+    }
+  }
+  .DivDropdown{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 18%;
+  }
   .Img{
-    margin:5px;
-    width: 900px;
-    height: 500px;
+    width: 1300px;
+    height: 750px;
   }
 }
