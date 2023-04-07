@@ -1,26 +1,29 @@
 .QueHacer {
   display: flex;
   margin-top: 5%;
-  text-align: start;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 18%;
+  justify-content: center;
   padding: 3%;
   background-color: rgb(233, 233, 233);
-  width: 58%;
   .ContainerQueHacer{
-    .Linea{
-      height: 5%;
-      width: 5%;
-      background-color: rgb(13, 40, 53);
-      margin-left: -24%;
+    p{
+    font-size: 25px;
+    }
+    .firstContainer{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+      .ImgsContainer{
+        margin-top: 4%;
+        display: flex;
+        align-content: space-around;
       }
-  }
-  .ImgsContainer{
-    margin-top: 4%;
-    display: flex;
-    align-content: space-around;
-    
+    }
+    .h1{
+      align-self: center;
+      font-size: 30px;
+      text-shadow: 1px 1px 2px rgb(164, 119, 248);
+    }
   }
   
 }

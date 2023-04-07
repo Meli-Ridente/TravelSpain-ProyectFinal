@@ -13,9 +13,9 @@ function App() {
       <Header />
       <div className='AppContainer'>
         <div className='Links'>
-          <Link to='/' style={{margin: '20px'}}>🏠HOME</Link>
-          <Link to='/vuelos' style={{margin: '20px'}}>✈️VUELOS</Link>
-          <Link to='/cruceros' style={{margin: '20px'}}>🚢CRUCEROS</Link>
+          <Link to='/' style={{margin: '20px'}}>🏠</Link>
+          <Link to='/vuelos' style={{margin: '20px'}}>✈️</Link>
+          <Link to='/cruceros' style={{margin: '20px'}}>🚢</Link>
         </div>
         <Routes>
           <Route exact path='/' element={<HomePage />} ></Route>

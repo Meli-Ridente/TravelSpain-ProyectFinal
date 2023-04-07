@@ -1,25 +1,34 @@
 .Home {
   .ContainerUl{
-    margin-right: 20%;
     display: flex;
+    position: absolute;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-end;
-    li{
-      list-style:circle;
-      .Down:hover{
-        color: red;
-        display: inline;
+    justify-content: start;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.37);
+    .Uls{
+      display: flex;
+      flex-direction: row;
+      li{
+        margin-left: 120px;
+        list-style:circle;
+        .Down:hover{
+          text-decoration: underline;
+          color: rgba(66, 185, 253, 0.733);
+          display: inline;
+        }
+        p{
+          margin: 0;
+        }
       }
+
     }
   }
-  .DivDropdown{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 18%;
-  }
   .Img{
-    width: 1300px;
-    height: 750px;
+    width: 100%;
+    height: 500px;
   }
 }

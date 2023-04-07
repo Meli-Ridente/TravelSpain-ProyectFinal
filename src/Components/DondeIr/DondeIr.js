@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import styles from './DondeIr.module.scss';
 import mapa from '../../assets/mapa.jpg'
 
-const DondeIr = () => (
+const DondeIr = ({isVisible}) => (
+  isVisible && ( 
   <div className={styles.DondeIr}>
-    <h1>Descubre los mejores destinos de España</h1>
-    <div className={styles.Linea}><p></p></div>
+    <h2>Descubre los mejores destinos de España</h2>
       <div className={styles.ContainerUls}>
         <ul className='Uls'>
           <li>Madrid</li>
           <li>Barcelona</li>
           <li>Valencia</li>
           <li>Sevilla</li>
-          <li>Santiago de Compostela</li>
+          <li>Alicante</li>
           <li>Cadiz</li>
         </ul>
         <ul>
@@ -24,9 +24,9 @@ const DondeIr = () => (
           <li>Zaragoza</li>
           <li>Granada</li>
         </ul>
-        <img src={mapa} width={'40%'} className={styles.ImagenDondeIr}></img>
       </div>
   </div>
+  )
 );
 
 DondeIr.propTypes = {};

@@ -18,13 +18,13 @@ const [vuelos, setVuelos] = useState([])
   <div className={styles.Vuelos}>
     {vuelos.map((vuelo) => 
       <div className={styles.ContainerVuelos}>
-        <img src={vuelo.img1} style={{width:'500px', height:'450px', borderRadius:'20px'}} />
+        <img src={vuelo.img1} className={styles.Imagen} />
+        <p className={styles.Border}></p>
         <div className={styles.DatosVuelo}>
-          <h1>{vuelo.title}</h1>
-          <div className={styles.DatePrice}>
-            <p>{vuelo.date}</p>
-            <p>{vuelo.price}</p>
-          </div>
+          <p className={styles.date}>{vuelo.date}</p>
+          <p className={styles.title}>{vuelo.title}</p>
+          <p className={styles.price}>{vuelo.price} </p>
+          <p className={styles.Prime}>♦️Precio prime por persona</p>
         </div>
       </div>
     )}

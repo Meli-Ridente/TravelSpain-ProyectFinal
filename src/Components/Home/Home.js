@@ -1,35 +1,37 @@
 import React, { useState } from 'react';
 import styles from './Home.module.scss';
-import img from '../../assets/img.png'
-import DondeirPage  from '../../Pages/DondeirPage'
-import QueHacerPage from '../../Pages/QueHacerPage'
+import img from '../../assets/bkg.jpg'
+import Dondeir from '../../Components/DondeIr/DondeIr'
+import DondeirPage from '../../Pages/DondeirPage'
+import QueHacer from '../../Components/QueHacer/QueHacer'
+import QueHacerPage from '../../Pages/QueHacerPage';
 import {DownOutlined} from '@ant-design/icons'
+import Ofertas from '../Ofertas/Ofertas';
 
 export const Home = () => {
 
   const [isVisibleDondeIr, setIsVisibleDondeIr] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisibleQueHacer, setisVisibleQueHacer] = useState(false)
  
   return (
     <div className={styles.Home}>
-        <div className={styles.ContainerUl}>
-          <ul>
-            <li onClick={() => setIsVisibleDondeIr(!isVisibleDondeIr)}>
-              <p>Dónde ir <DownOutlined className={styles.Down} /></p>
-              <DondeirPage isVisible={isVisibleDondeIr}/>
-            </li>
-          </ul> 
-          <ul>
-            <li>
-              <p>Qué hacer <DownOutlined className={styles.Down}/>
-              <QueHacerPage />
-              </p>
-            </li>
-          </ul>
-        </div>
-        <img src={img} className={styles.Img}/>
-      
-      
+      <div className={styles.ContainerUl}>
+        <ul className={styles.Uls}>
+          <li onClick={() => setIsVisibleDondeIr(!isVisibleDondeIr)}>
+            <p className={styles.Down}>Dónde ir <DownOutlined /></p>
+            <Dondeir isVisible={isVisibleDondeIr}/>
+          </li>
+          <li onClick={() => setisVisibleQueHacer(!isVisibleQueHacer)}>
+            <p className={styles.Down}>Qué hacer <DownOutlined/></p>
+            <QueHacerPage isVisible={isVisibleQueHacer}/>
+          </li>
+        </ul>
+      </div>
+      <img src={img} className={styles.Img}/>
+      <Ofertas />
+      <DondeirPage />
+      <QueHacer />
+
     </div>
   )
 }

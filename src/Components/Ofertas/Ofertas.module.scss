@@ -1,0 +1,95 @@
+.Ofertas{
+  margin: 80px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .OfertasCont {
+    display: flex;
+    width: 55%;
+    .Header{
+      text-align: justify;
+      .PRIME{
+        font-weight: bold;
+        font-size: xx-large;
+        margin-bottom: -48px;
+      }
+      .MejoresOf{
+        font-size: xx-large;
+        margin-bottom: -15px;
+      }
+      .Red{
+        color: rgb(255, 91, 42);
+        font-size: large;
+      }
+    }
+  }
+    .Container{
+      margin: 30px 0;
+      display: grid;
+      grid-template-columns: repeat(3, 3fr);
+      .ContainerCard{
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        text-align:center;
+        width: 300px;
+        background-color: #df473b;
+        border: rgb(182, 182, 182) 1px solid;
+        border-radius: 20px;
+        margin: 20px 30px;
+        height: 230px;
+        position: relative;
+      }
+      .ContainerCard:hover{
+        box-shadow: 4px 5px 10px rgb(235, 10, 10);
+
+      }
+      .Img{
+        width: 250px;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: -100px;
+        margin-top: -5%;
+      }
+      .Border{
+        width: 250px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 40px solid rgb(252 105 7 / 46%);
+        margin-top: -12%;
+        margin-left: -300px;
+        height: 150px;
+      }
+      .Card{
+        display: flex;
+        color: white;
+        padding-left: 20px;
+        font-size: 20px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: end;
+        p{
+          margin: 0px;
+        }
+        .price{
+          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-size: 30px;
+          color: rgba(255, 255, 0, 0.678);
+        }
+        .Porcentaje{
+          width: 70px;
+          height: 30px;
+          font-size: 20px;
+          font-weight: bold;
+          margin-top: -180px;
+          margin-left: -80px;
+          position: absolute;
+          background-color: rgb(255 235 59 / 63%);
+          background-size: cover;
+          border-radius: 30px;
+        }
+      }
+    }
+  
+}
