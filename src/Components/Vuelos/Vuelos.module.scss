@@ -1,19 +1,57 @@
 .Vuelos {
   @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:ital@0;1&display=swap');
-  display: grid;
-  grid-template-columns: repeat(3, 4fr);
-  // align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: 15%;
+  .DivBuscador{
+    position: absolute;
+    left: 70%;
+    top:15%;
+    border-radius: 1px dashed black;
+    p{
+      font-size: 20px;
+      color: red;
+      margin-left: 1%;
+    }
+    a{
+      color: red;
+    }
+    .promos{
+      margin-top: 10%;
+      position: fixed;
+      display: flex;
+      align-items: center;
+      border: 2px dashed;
+      padding: 1%;
+    }
+    .promos:hover{
+      box-shadow: 2px 2px 2px  red;
+    }
+    .Buscador{
+      
+      margin: 2% 20%;
+      border-radius: 1px 10px;
+      border: 1,5px solid;
+      width: 250px;
+      height: 40px;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+ 
   .ContainerVuelos{
     overflow: hidden;
     text-align:center;
     display: flex;
     flex-direction: row;
     width: 380px;
-    background-color: white;
     border: rgb(182, 182, 182) 1px solid;
     border-radius: 20px;
     margin: 50px 30px;
-    height: 230px;
+    height: 180px;
+    background-color: #81c0f3;
+
       p{
         margin: 10px;
       }
@@ -21,35 +59,45 @@
         width: 250px;
         overflow: hidden;
         border-radius: 50%;
-        border: 40px solid rgba(8, 34, 65, 0.068);
-        margin-top: -12%;
+        border: 40px solid rgba(8, 34, 65, 0.253);
+        margin-top: -16%;
         margin-left: -300px;
         height: 150px;
       }
       .Imagen{
         width: 250px;
+        position: relative;
         height: 200px;
         border-radius: 50%;
         margin-left: -70px;
-        margin-top: -5%;
+        margin-top: -9%;
       }
     .DatosVuelo{
       display: flex;
       flex-direction: column;
       align-items: center;
+      .date{
+        font-weight: bold;
+      }
       .Prime{
+        top: 10px;
+        margin: 0;
+        position: relative;
         font-size: 12px;
-        margin-top: 10px;
+        font-weight: bold;
       }
       .price{
-        color: rgb(255, 15, 7);
+        color: red;
         font-size: 20px;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       }
       .title{
-        font-size: 28px;
+        font-size: 25px;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
     }
+  }
+  .ContainerVuelos:hover{
+    transform: scale(1.1);
   }
 }

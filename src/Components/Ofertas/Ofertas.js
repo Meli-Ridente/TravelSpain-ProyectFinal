@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import {useDispatch, useSelector} from 'react-redux'
 import PropTypes from 'prop-types';
 import styles from './Ofertas.module.scss';
+import { getOfertas } from '../../store/info/action';
 import fuego from '../../assets/fuego.webp'
 
 const Ofertas = () => {
-
-  const [ofertas, setOfertas] = useState([])
-
-  useEffect(() => {
-    fetch('http://localhost:8765/ofertas')
-    .then((response) => response.json())
-    .then((json) => setOfertas(json))
-    .catch((error) => console.error(error))
-  },[])
+  const dispatch = useDispatch()
+  const {ofertas, loadingOfertas}= useSelector((state) => state.VuelosReducer)
   console.log(ofertas)
+  useEffect(() => {
+    dispatch(getOfertas())
+  },[])
+
   return (
     <div className={styles.Ofertas}>
       <div className={styles.OfertasCont}>
-        <img src={fuego} width={80} height={150}/>
+        <img src={fuego} width={80} height={150} style={{marginRight: '20px'}}/>
         <div className={styles.Header}>
           <p className={styles.PRIME}>PRIME</p>
           <p className={styles.MejoresOf}>MEJORES OFERTAS</p>

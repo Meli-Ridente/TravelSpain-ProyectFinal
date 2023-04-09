@@ -7,8 +7,8 @@
     width: 100%;
     font-size: 20px;
     font-weight: bold;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.37);
+    color: black;
+    background-color: rgba(255, 255, 255, 0.37);
     .Uls{
       display: flex;
       flex-direction: row;
@@ -17,7 +17,7 @@
         list-style:circle;
         .Down:hover{
           text-decoration: underline;
-          color: rgba(66, 185, 253, 0.733);
+          color: rgba(0, 33, 53, 0.911);
           display: inline;
         }
         p{

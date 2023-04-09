@@ -1,10 +1,35 @@
-import React from 'react'
-import DondeIr from '../Components/DondeIr/DondeIr'
+import React, {useEffect, useState} from 'react'
 import Barcelona from '../assets/Barcelona.avif'
-import {SearchOutlined} from '@ant-design/icons'
 import mapa from '../assets/mapa.jpg'
+import {getVuelos} from '../store/info/action'
+import {useDispatch, useSelector} from 'react-redux'
+import {Link, Navigate} from 'react-router-dom'
 
 const DondeirPage = () => {
+
+  const dispatch = useDispatch()
+  const {vuelos, loadingVuelos} = useSelector((state) => state.VuelosReducer)
+  const [filter, setFilter] = useState(vuelos)
+
+
+  useEffect(() => {
+    dispatch(getVuelos())
+  },[])
+  
+  const filterVuelos = (filter) => {
+    let results = vuelos.filter((vuelo) => {
+      if(vuelo.title.toLowerCase().includes(filter.toLowerCase())){
+        return vuelo;
+      }
+    })
+    setFilter(results)
+  }
+
+  const handleChange = e=>{
+    setFilter(e.target.value)
+    filterVuelos(e.target.value)
+  }
+
   return (
     <div className='DondeIrContainer'>
       <div className='CardContainer'>
@@ -16,25 +41,24 @@ const DondeirPage = () => {
           <p>BARCELONA</p>
           <p>La ciudad de la inspiración.</p>
         </div>
-        
-        <div style={{position:'relative'}}>
-        <input type='text' placeholder='(Buscar otros destinos)'
-          style={{width: '400px', 
-                marginTop: '20px',
-                height: '50px', 
-                border:'3px black solid', 
-                textAlign:'center',
-                fontSize:'20px'
-                
-            }}
-          />
-          <SearchOutlined style={{
-            position: 'absolute',
-            top: '40px',
-            fontSize: '20px',
-            right: '12px'
-          }}/>
-        </div>
+        <select for="Destinos" style={{width: '400px', marginTop: '20px', height: '50px', border:'3px black solid', textAlign:'center',fontSize:'20px',}}>
+          <option>Escoge tu destino:</option>
+          <option value="Madrid"> Madrid</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Valencia">Valencia</option>
+          <option value="Sevilla">Sevilla</option>
+          <option value="Zaragoza">Zaragoza</option>
+          <option value="Málaga">Málaga</option>
+          <option value="Bilbao">Bilbao</option>
+          <option value="Santiago">Santiago de compostela</option>
+          <option value="Salamanca">Salamanca</option>
+          <option value="Santander">Santander</option>
+          <option value="Cáceres">Cáceres</option>
+          <option value="Canarias">Islas Canarias</option>
+          <option value="Baleares">Islas Baleares</option>
+          <option value="Toledo">Toledo</option>
+          <option value="Alicante">Alicante</option>
+        </select>
         <button 
           style={{width: '400px', 
                 marginTop: '20px',
