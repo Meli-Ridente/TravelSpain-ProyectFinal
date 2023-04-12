@@ -19,7 +19,7 @@ const Ofertas = () => {
         <img src={fuego} width={80} height={150} style={{marginRight: '20px'}}/>
         <div className={styles.Header}>
           <p className={styles.PRIME}>PRIME</p>
-          <p className={styles.MejoresOf}>MEJORES OFERTAS</p>
+          <p className={styles.MejoresOf}>MEJORES OFERTAS EN NUESTROS VUELOS</p>
           <p className={styles.Red}>¡Ahorra y visita nuestros destinos!</p>
         </div>
       </div>

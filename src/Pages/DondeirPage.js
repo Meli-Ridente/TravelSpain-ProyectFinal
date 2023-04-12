@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Barcelona from '../assets/Barcelona.avif'
 import mapa from '../assets/mapa.jpg'
 import {getVuelos} from '../store/info/action'
+import { useNavigate } from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import {Link, Navigate} from 'react-router-dom'
 
@@ -10,6 +11,7 @@ const DondeirPage = () => {
   const dispatch = useDispatch()
   const {vuelos, loadingVuelos} = useSelector((state) => state.VuelosReducer)
   const [filter, setFilter] = useState(vuelos)
+  const navigate = useNavigate()
 
 
   useEffect(() => {
@@ -41,23 +43,23 @@ const DondeirPage = () => {
           <p>BARCELONA</p>
           <p>La ciudad de la inspiración.</p>
         </div>
-        <select for="Destinos" style={{width: '400px', marginTop: '20px', height: '50px', border:'3px black solid', textAlign:'center',fontSize:'20px',}}>
-          <option>Escoge tu destino:</option>
-          <option value="Madrid"> Madrid</option>
-          <option value="Barcelona">Barcelona</option>
-          <option value="Valencia">Valencia</option>
-          <option value="Sevilla">Sevilla</option>
-          <option value="Zaragoza">Zaragoza</option>
-          <option value="Málaga">Málaga</option>
-          <option value="Bilbao">Bilbao</option>
-          <option value="Santiago">Santiago de compostela</option>
-          <option value="Salamanca">Salamanca</option>
-          <option value="Santander">Santander</option>
-          <option value="Cáceres">Cáceres</option>
-          <option value="Canarias">Islas Canarias</option>
-          <option value="Baleares">Islas Baleares</option>
-          <option value="Toledo">Toledo</option>
-          <option value="Alicante">Alicante</option>
+        <select for="Destinos" style={{width: '400px', marginTop: '20px', height: '50px', border:'3px black solid', textAlign:'center',fontSize:'20px',}} onChange={(e) => navigate(`/vuelo/${e.target.value}`)}>
+          <option disabled selected>Escoge tu destino:</option>
+          <option value="1"> Madrid</option>
+          <option value="2">Barcelona</option>
+          <option value="3">Valencia</option>
+          <option value="4">Sevilla</option>
+          <option value="5">Zaragoza</option>
+          <option value="6">Málaga</option>
+          <option value="7">Bilbao</option>
+          <option value="8">Santiago de compostela</option>
+          <option value="9">Salamanca</option>
+          <option value="10">Santander</option>
+          <option value="11">Cáceres</option>
+          <option value="12">Islas Canarias</option>
+          <option value="13">Islas Baleares</option>
+          <option value="14">Toledo</option>
+          <option value="15">Alicante</option>
         </select>
         <button 
           style={{width: '400px', 

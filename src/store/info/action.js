@@ -9,7 +9,10 @@ import {
   GET_OFERTAS_FAIL,
   GET_VUELO,
   GET_VUELO_OK,
-  GET_VUELO_FAIL
+  GET_VUELO_FAIL,
+  GET_CRUCERO,
+  GET_CRUCERO_OK,
+  GET_CRUCERO_FAIL
 } from './actionType'
 
 export function actionGetVuelos() {
@@ -114,6 +117,42 @@ export function getVueloId(vueloId){
     }
     catch(error){
       dispatch(actionGetVueloFail(error))
+    }
+  }
+}
+
+
+        // CRUCEROS
+
+
+export function actionGetCruceros(){
+  return{
+    type: GET_CRUCERO
+  }
+}
+
+export function actionGetCruceroOk(cruceros) {
+  return{
+    type: GET_CRUCERO_OK,
+    payload: cruceros
+  }
+}
+
+export function actionGetCrucerosFail(error){
+  return{
+    type: GET_CRUCERO_FAIL,
+    payload: error
+  }
+}
+
+export function getCruceros(){
+  return async (dispatch) => {
+    dispatch(actionGetCruceros())
+    try{
+      const response = await axios.get('http://localhost:8765/cruceros')
+      dispatch(actionGetCruceroOk(response.data))
+    }catch(error){
+      dispatch(actionGetCrucerosFail(error))
     }
   }
 }
