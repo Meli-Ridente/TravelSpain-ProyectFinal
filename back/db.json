@@ -1,0 +1,39 @@
+{
+  "vuelos": [
+    { "id": 1, 
+      "title": "Madrid", 
+      "title2": "file:///C:/Users/Nicol/Desktop/mel/titles/Logotipo%20Moda%20y%20Accesorios%20Org%C3%A1nico%20Beige%20Marr%C3%B3n.png", 
+      "info": "La capital de las mil opciones",
+      "date": "20 abril", "price": "40, 25 €",
+      "img1": "https://media.vogue.mx/photos/5c070fa0676a2333766f1cc9/1:1/w_2575,h_2575,c_limit/madrid_212.jpg", 
+      "img2": "https://images.alphacoders.com/111/1112475.jpg"},
+      
+    { "id": 2, "title": "Barcelona", "date": "20 may", "price": "50, 75 €", "img1": "https://i.insider.com/6262f7ab9d79ac0018d3cf0c?width=700", "img2": "https://interrailero.com/wp-content/uploads/2022/01/que-ver-en-barcelona-mapa.jpg"},
+    { "id": 3, "title": "Valencia", "date": "20 jun", "price": "66, 60 €", "img1": "https://www.floresyplantas.net/wp-content/uploads/ciudad-de-valencia-y-su-rio-turia.jpg", "img2": "https://wallpaperaccess.com/full/1612457.jpg"},
+    { "id": 4, "title": "Sevilla", "date": "20 jun", "price": "80, 20 €", "img1": "https://st3.depositphotos.com/1053932/13101/i/600/depositphotos_131016536-stock-photo-seville-sevilla-plaza-de-espana.jpg", "img2": "https://wallpaperaccess.com/full/1664865.jpg"},
+    { "id": 5, "title": "Zaragoza", "date": "23 jul", "price": "30 €", "img1": "https://a.cdn-hotels.com/gdcs/production10/d1442/77b32160-68ce-11e8-8a0f-0242ac11000c.jpg?impolicy=fcrop&w=800&h=533&q=medium", "img2": "https://images2.alphacoders.com/545/thumb-1920-545232.jpg"},
+    { "id": 6, "title": "Málaga", "date": "10 jul", "price": "60,60 €", "img1": "https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/andalucia/malaga-52886652-istock.jpg", "img2": "https://fondosmil.com/fondo/43761.jpg"},
+    { "id": 7, "title": "Bilbao", "date": "30 agos", "price": "44, 20 €", "img1": "https://turismo.euskadi.eus/contenidos/d_destinos_turisticos/0000004981_d2_rec_turismo/es_4981/images/PT_cabecerabilbaoguggen1024.jpg", "img2": "https://img4.goodfon.com/wallpaper/nbig/0/9b/bilbao-bilbao-ispaniia-mercado-de-la-ribera.jpg"},
+    { "id": 8, "title": "Santiago", "date": "27 sept", "price": "60, 24 €", "img1": "https://a.cdn-hotels.com/gdcs/production71/d324/e92744b0-708b-11e8-8a0f-0242ac11000c.jpg?impolicy=fcrop&w=800&h=533&q=medium", "img2": "https://as01.epimg.net/epik/imagenes/2020/11/07/portada/1604742233_010004_1604742332_noticia_normal.jpg"},
+    { "id": 9, "title": "Salamanca", "date": "5 oct", "price": "75 €", "img1": "https://upload.wikimedia.org/wikipedia/commons/0/04/Reflejos_de_la_Catedrales_de_Salamanca.jpg", "img2": "https://fondosmil.com/fondo/8127.jpg"},
+    { "id": 10, "title": "Santander", "date": "25 oct", "price": "63 €", "img1": "https://www.iberian-escapes.com/images/santander-city.jpg", "img2": "https://e0.pxfuel.com/wallpapers/513/481/desktop-wallpaper-conectividad-digital-e-i-d-i-ambitos-competitivos-de-santander.jpg"},
+    { "id": 11, "title": "Cáceres", "date": "20 nov", "price": "55 €", "img1": "https://viajes.nationalgeographic.com.es/medio/2023/03/21/caceres_ae8e1bbc_640227486_230321131232_2000x1333.jpg", "img2": "https://rare-gallery.com/uploads/posts/890255-Alcantara-Bridge-Tagus-river-province-Caceres-Rivers.jpg"},
+    { "id": 12, "title": "Islas Canarias", "date": "20 nov", "price": "110, 20 €", "img1": "https://www.gilmar.es/wp-content/uploads/2022/04/mejores-zonas-vivir-islas-canarias.jpg", "img2": "https://c4.wallpaperflare.com/wallpaper/263/929/211/selective-focus-of-purple-daisy-flower-wallpaper-preview.jpg"},
+    { "id": 13, "title": "Islas Baleares", "date": "14 nov", "price": "150 €", "img1": "https://www.civitatis.com/f/zonas/baleares/baleares.jpg", "img2": "https://rare-gallery.com/uploads/posts/820587-Palma-de-Mallorca-Majorca-Mallorca-Spain-Houses.jpg"},
+    { "id": 14, "title": "Toledo", "date": "20 dic", "price": "99 €", "img1": "https://images.contentstack.io/v3/assets/blt00454ccee8f8fe6b/blt0226ba91bb9ef16e/6035d8e46217f744c110355a/ES_Toledo_ES_Header.jpg?width=1680&quality=70&auto=webp", "img2": "https://upload.wikimedia.org/wikipedia/commons/2/26/Toledo_Skyline_Panorama%2C_Spain_-_Dec_2006.jpg"},
+    { "id": 15, "title": "Alicante", "date": "5 feb", "price": "51 €", "img1": "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/50000/50794-Alicante.jpg", "img2":"https://www.sonneil.com/blog/wp-content/uploads/2022/06/iStock-1327523866-1080x675.jpg"}
+    
+  ],
+  "ofertas":[
+    {"id": 1, "title": "Barcelona", "price": "40 €", "img": "http://res.cloudinary.com/sagacity/image/upload/c_crop,h_770,w_1000,x_0,y_0/c_limit,f_auto,fl_lossy,q_80,w_1080/shutterstock_174454670_gicbgy.jpg"},
+    {"id": 2, "title": "Madrid", "price": "33 €", "img": "https://www.berlin.de/imgscaler/Lsn6XXpQlE2B0VoAVx669OGZ5zwxeyCTBWuDd1pP-6s/ropen/L3N5czExLXByb2QvZGVwb3NpdHBob3Rvcy9zdGFlZHRlL2RlcG9zaXRwaG90b3NfNDE5NzU2MjVfbC0yMDE1LmpwZw.jpg"},
+    {"id": 3, "title": "Toledo", "price": "50 €", "img": "https://www.esmadrid.com/sites/default/files/styles/content_type_full/public/widgets/items/images/toledo3.jpg?itok=6Jcjue51"},
+    {"id": 4, "title": "Zaragoza", "price": "60 €", "img": "https://images.ctfassets.net/ihlmn42cjuv0/6GwRDFWMBT7rAEHwou3urW/a3c7fa484bd47d8357f7df00345b414a/mosque-7008637.jpg?fit=fill&w=1346&h=838&fm=jpg&q=93"},
+    {"id": 5, "title": "Asturias", "price": "38 €", "img": "https://lonelyplanetes.cdnstatics2.com/sites/default/files/styles/max_1300x1300/public/fotos/shutterstock_1199262877.jpg?itok=1QVLVSxl"},
+    {"id": 6, "title": "Málaga", "price": "38 €", "img": "https://imagenes.20minutos.es/files/image_990_v3/files/fp/uploads/imagenes/2022/07/14/malaga-istock-1017217230.r_d.600-723-7895.jpeg"}
+  ],
+  "cruceros": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}

@@ -1,6 +1,11 @@
 .App {
   text-align: center;
+  font-family: 'Playfair Display', serif;
+
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:ital@0;1&display=swap');
+
 
 .App-logo {
   height: 40vmin;
@@ -37,18 +42,25 @@
   }
 }
 
+.AppContainer{
+  width: 100%;
+}
+
+.ContainerHeader{
+  height: 300px;
+}
+
 .NavBar{
   background-color: rgb(13, 40, 53);
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 80px;
-  justify-content: space-around;
   color: white;
+  justify-content: space-evenly;
 }
 .Imagen{
   width: 300px;
-  position: absolute;
   margin-top: -90px;
 }
 
@@ -64,3 +76,77 @@
   align-items: center;
   margin: 20px;
 }
+
+.Links{
+  display: flex;  
+  width: 60px;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 5%;
+  top: 20%;
+  border-radius: 20px;
+  color: black;
+  position: fixed;
+  transition: 1s;
+  background-color: rgb(129 111 189 / 23%);
+}
+
+a:hover{
+  text-shadow: 3px 5px 9px #61dafb;
+}
+
+.Links:hover{
+  transform: translateX(10px);
+}
+
+.DondeIrContainer{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 40px;
+  
+}
+
+.CardContainer{
+  display: flex;
+  padding: 1% 0;
+  margin-top: 1%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CardBarcelona{
+  text-align: center;
+  width: 450px;
+}
+
+.CardContainer:hover{
+  box-shadow: 2px 5px 5px rgb(75, 70, 70);
+}
+
+.titleCard{
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-left: -100px;
+  position: absolute;
+  margin-top: 370px;
+}
+
+.ContainerQueHacer{
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-gap: 5%;
+}
+
+.CardQueHacer{
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.CardQueHacer:hover{
+  color: rgb(119, 180, 233);
+  text-decoration: underline;
+  box-shadow: 2px 3px 3px rgb(75, 70, 70);
+}
+
