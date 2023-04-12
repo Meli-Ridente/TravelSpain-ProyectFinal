@@ -1,4 +1,6 @@
 import React, {useEffect} from 'react';
+import { InfoOutlined, HeartOutlined, ShareAltOutlined, HomeOutlined } from '@ant-design/icons';
+import { Button, Divider, Radio, Space } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from "react-router-dom";
 import {getVueloId} from '../../store/info/action'
@@ -25,9 +27,22 @@ const Vuelo = () => {
   <div className={styles.Vuelo}>
     <div className={styles.ContainerVuelo} >
       <img src={vuelo.img2} className={styles.Imagen} />
-      <p className={styles.Title}>{vuelo.title}</p>
-      <p className={styles.subTitle}>{vuelo.info}</p>
+      <div className={styles.Infos}>
+        <p className={styles.Title}>{vuelo.title}</p>
+        <p className={styles.subTitle}>{vuelo.info}</p>
+      </div>
+      <div className={styles.nav}>
+        <span>{vuelo.description}</span>
+        <div>
+        <Link to='/'><Button shape="round" icon={<HomeOutlined />} className={styles.Buttons}/></Link>
+          <Link to='/about'><Button shape="round" icon={<InfoOutlined />} className={styles.Buttons}/></Link>
+          <Link to='/login'><Button shape="round" icon={<HeartOutlined /> } className={styles.Buttons}/></Link>
+          <Link to><Button shape="round" icon={<ShareAltOutlined /> }className={styles.Buttons}/></Link>
+        </div>
+      </div> 
+      
     </div>
+    <h1>¿Qué hacer en {vuelo.title}? ¡Conoce sus festividades!</h1>
   </div>
   )
 };

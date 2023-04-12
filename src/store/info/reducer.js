@@ -7,7 +7,10 @@ import {
   GET_OFERTAS_FAIL,
   GET_VUELO,
   GET_VUELO_OK,
-  GET_VUELO_FAIL
+  GET_VUELO_FAIL,
+  GET_CRUCERO,
+  GET_CRUCERO_OK,
+  GET_CRUCERO_FAIL
 } from './actionType'
 
 const initialState = {
@@ -17,6 +20,8 @@ const initialState = {
   loadingOfertas: false,
   vuelo: {},
   loadingVuelo: false,
+  cruceros: [],
+  loadingCruceros: [],
   error: {
     message: ''
   },
@@ -24,6 +29,8 @@ const initialState = {
 
 export default function VuelosReducer(state = initialState, action){
   switch(action.type){
+
+
     case GET_VUELOS: 
       state = {...state, loadingVuelos: true}
       break;
@@ -35,6 +42,7 @@ export default function VuelosReducer(state = initialState, action){
     case GET_VUELOS_FAIL:
       state = {...state, loadingVuelos: false, vuelos:[], error: {message: action.payload}}
       break;
+
 
     case GET_OFERTAS:
       state = {...state, loadingOfertas: true}
@@ -57,9 +65,22 @@ export default function VuelosReducer(state = initialState, action){
       break
 
     case GET_VUELO_FAIL:
-      state = {...state, loadingVuelo: false, vuelo: {}}
+      state = {...state, loadingVuelo: false, vuelo: {}, error: {message: action.payload}}
 
 
+
+    case GET_CRUCERO:
+      state = {...state, loadingCruceros: true}
+      break
+    
+    case GET_CRUCERO_OK:
+      state = {...state, loadingCruceros: false, cruceros: action.payload}
+      break
+
+    case GET_CRUCERO_FAIL:
+      state = {...state, loadingCruceros: false, cruceros:{}, error: {message: action.payload}}
+
+      
     default:
       break
   }
