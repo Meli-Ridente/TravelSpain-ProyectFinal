@@ -5,8 +5,10 @@ import styles from './Cruceros.module.scss'
 import crucero from '../../assets/crucero.webp'
 import crucero2 from '../../assets/crucero2.jpg'
 import {Link} from 'react-router-dom'
+import {useTranslation} from 'react-i18next'
 
 const Cruceros = () => {
+  const [t, i18n] = useTranslation("global")
   const dispatch = useDispatch()
   const {loadingCruceros, cruceros} = useSelector((state) => state.VuelosReducer)
   const [filter, setFilter] = useState(cruceros)
@@ -40,7 +42,7 @@ const Cruceros = () => {
       <div className={styles.DivBuscador}>
         <input className={styles.Buscador} type='text' placeholder='Busca tu crucero' onChange={handleChange}></input>
       </div>
-      <h1>LOS MEJORES CRUCEROS PARA CONOCER ESPAÑA</h1>
+      <h1>{t("Cruceros.best")}</h1>
       <div className={styles.First}>
         {filter.map((crucero) =>
           <div className={styles.ContainerCruceros}>
@@ -50,7 +52,7 @@ const Cruceros = () => {
               <Link to={`/vuelo/${crucero.id}`}><p className={styles.title}>{crucero.title}</p></Link>
               <p className={styles.date}>{crucero.date}</p>
               <p className={styles.price}>{crucero.price} </p>
-              <p className={styles.Prime}>♦️Precio prime por persona</p>
+              <p className={styles.Prime}>♦️{t("Cruceros.prime")}</p>
             </div>
           </div>
         )}

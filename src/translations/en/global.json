@@ -1,0 +1,45 @@
+{
+  "Home": {
+    "dondeIr": "Where to go",
+    "queHacer": "What to do"
+  },
+  "Ofertas":{
+    "prime": "PRIME",
+    "mejorOf": "BEST DEALS ON OUR FLIGTHS",
+    "ahorra": "Save and visit our destinations!"
+  },
+  "DondeIr":{
+    "h2": "Discover the best destinations in Spain"
+  },
+  "QueHacer":{
+    "text": "Choose the plan that you like best to make your stay in Spain unforgettable!",
+    "h1": "IDEAL PLANS",
+    "time": "THE BEST TIME INVESTED"
+  },
+  "DondeIrP":{
+    "h1": "Discover our destinations",
+    "p": "The city of inspiration.",
+    "option": "Know your destiny:",
+    "p2": "Go to interactive map"
+  },
+  "QueHacer2":{
+    "plans": "Plans for all tastes",
+    "ac": "ART AND CULTURE",
+    "cp": "COASTS AND BEACHES",
+    "tu": "URBAN TOURISM",
+    "nt": "NATURE",
+    "gst": "GASTRONOMY",
+    "da": "SPORT AND ADVENTURE",
+    "cm": "SHOPPING",
+    "rt": "ROUTES"
+  },
+  "Vuelos":{
+    "no": "Don't let our",
+    "promos": "PROMOTIONS!",
+    "prime": "Prime price per person"
+  },
+  "Cruceros": {
+    "best": "THE BEST CRUISES TO DISCOVER SPAIN",
+    "prime": "Prime price per person"
+  }
+}

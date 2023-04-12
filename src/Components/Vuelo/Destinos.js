@@ -8,7 +8,7 @@ import { Spin } from 'antd';
 import {Link} from 'react-router-dom'
 import styles from './Vuelo.module.scss';
 
-const Vuelo = () => {
+const Destinos = () => {
   
   const {vuelo, loadingVuelo} = useSelector((state) => state.VuelosReducer)
   const params = useParams()
@@ -47,8 +47,8 @@ const Vuelo = () => {
   )
 };
 
-Vuelo.propTypes = {};
+Destinos.propTypes = {};
 
-Vuelo.defaultProps = {};
+Destinos.defaultProps = {};
 
-export default Vuelo;
+export default Destinos;

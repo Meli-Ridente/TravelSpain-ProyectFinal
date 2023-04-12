@@ -5,9 +5,10 @@ import {getVuelos} from '../store/info/action'
 import { useNavigate } from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import {Link, Navigate} from 'react-router-dom'
+import {useTranslation} from 'react-i18next'
 
 const DondeirPage = () => {
-
+  const [t, i18n] = useTranslation("global")
   const dispatch = useDispatch()
   const {vuelos, loadingVuelos} = useSelector((state) => state.VuelosReducer)
   const [filter, setFilter] = useState(vuelos)
@@ -35,16 +36,16 @@ const DondeirPage = () => {
   return (
     <div className='DondeIrContainer'>
       <div className='CardContainer'>
-        <h1 style={{textShadow:'1px 1px 2px black'}}>Descubre nuestros destinos</h1>
+        <h1 style={{textShadow:'1px 1px 2px black'}}>{t("DondeIrP.h1")}</h1>
         <div className='CardBarcelona'>
           <img src={Barcelona} width={406} height={400}/>
         </div>
         <div className='titleCard'> 
           <p>BARCELONA</p>
-          <p>La ciudad de la inspiración.</p>
+          <p>{t("DondeIrP.p")}</p>
         </div>
         <select for="Destinos" style={{width: '400px', marginTop: '20px', height: '50px', border:'3px black solid', textAlign:'center',fontSize:'20px',}} onChange={(e) => navigate(`/vuelo/${e.target.value}`)}>
-          <option disabled selected>Escoge tu destino:</option>
+          <option disabled selected>{t("DondeIrP.option")}</option>
           <option value="1"> Madrid</option>
           <option value="2">Barcelona</option>
           <option value="3">Valencia</option>
@@ -71,7 +72,7 @@ const DondeirPage = () => {
                 backgroundColor: 'rgb(13, 40, 53)',
                 color: 'white'
             }}>
-          Ir a mapa interactivo</button>
+          {t("DondeIrP.p2")}</button>
     </div>
     <img src={mapa} width={600} height={550} style={{marginTop: '6%'}}/>
   </div>

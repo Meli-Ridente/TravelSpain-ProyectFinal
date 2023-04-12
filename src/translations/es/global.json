@@ -1,0 +1,45 @@
+{
+  "Home": {
+    "dondeIr": "Donde ir",
+    "queHacer": "Qué hacer"
+  },
+  "Ofertas":{
+    "prime": "PRIME",
+    "mejorOf": "MEJORES OFERTAS EN NUESTROS VUELOS",
+    "ahorra": "¡Ahorra y visita nuestros destinos!"
+  },
+  "DondeIr":{
+    "h2": "Descubre los mejores destinos de España"
+  },
+  "QueHacer":{
+    "texto": "Elige el plan que más te guste para hacer que tu estancia en España sea inolvidable!",
+    "h1": "PLANES IDEALES",
+    "time": "EL MEJOR TIEMPO INVERTIDO"
+  },
+  "DondeIrP":{
+    "h1": "Descubre nuestros destinos",
+    "p": "La ciudad de la inspiración.",
+    "option": "Conoce tu destino:",
+    "p2": "Ir a mapa interactivo"
+  },
+  "QueHacer2":{
+    "plans": "Planes para todos los gustos",
+    "ac": "ARTE Y CULTURA",
+    "cp": "COSTAS Y PLAYAS",
+    "tu": "TURISMO URBANO",
+    "nt": "NATURALEZA",
+    "gst": "GASTRONOMÍA",
+    "da": "DEPORTE Y AVENTURA",
+    "cm": "COMPRAS",
+    "rt": "RUTAS"
+  },
+  "Vuelos":{
+    "no": "No dejes pasar nuestras",
+    "promos": "PROMOCIONES!",
+    "prime": "Precio prime por persona"
+  },
+  "Cruceros": {
+    "best": "LOS MEJORES CRUCEROS PARA CONOCER ESPAÑA",
+    "prime": "Precio prime por persona"
+  }
+}

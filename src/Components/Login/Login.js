@@ -1,8 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import styles from './Login.module.scss';
+import {getUser} from '../../store/auth/action'
+import { Spin } from 'antd';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-const Login = () => (
+
+
+const Login = () => {
+  const dispatch = useDispatch()
+  const {user, loadingUser} = useSelector((state) => state.AuthReducer)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const navigate = useNavigate()
+
+  useEffect(() =>{
+    dispatch(getUser())
+  },[])
+
+  if(loadingUser){
+    return(
+      <Spin />
+    )
+  }
+
+  function tryLogin(){
+    const users = user.find((users) => users.email ===email && users.password ===password);
+    if(users)
+      navigate('/profile')
+    else
+    return users;
+    
+  }
+
+  
+
+
+  // function login(){
+  //   user = users.find((user) => user.email ===email && user.password ===password);
+      
+  //   if(user){
+  //     return(
+  //       <Navigate to='/home' replace></Navigate>
+  //     )
+  //   }
+    
+  //   if (user === undefined) throw new Error();
+  //   return user;
+  // }
+  
+  // console.log(user)
+
+  return (
+
+
   <div className={styles.Login}>
     <Form
     name="basic"
@@ -19,14 +71,17 @@ const Login = () => (
       remember: true,
     }}
     autoComplete="off"
+    onFinish={tryLogin}
   >
     <Form.Item
-      label="Username"
-      name="username"
+      label="Email"
+      name="email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
       rules={[
         {
           required: true,
-          message: 'Please input your username!',
+          message: 'Please input your email!',
         },
       ]}
     >
@@ -36,6 +91,8 @@ const Login = () => (
     <Form.Item
       label="Password"
       name="password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
       rules={[
         {
           required: true,
@@ -63,13 +120,14 @@ const Login = () => (
         span: 16,
       }}
     >
-      <Button type="primary" htmlType="submit">
+      <Button type="primary" htmlType="submit" onClick={tryLogin}> 
         Submit
-      </Button>
+      </Button> 
     </Form.Item>
   </Form>
   </div>
-);
+  )
+};
 
 Login.propTypes = {};
 
