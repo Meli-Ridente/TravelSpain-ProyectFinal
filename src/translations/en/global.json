@@ -41,5 +41,23 @@
   "Cruceros": {
     "best": "THE BEST CRUISES TO DISCOVER SPAIN",
     "prime": "Prime price per person"
+  },
+  "Destinos":{
+    "qhacer": "What to do in",
+    "fst": "Know their festivities!"
+  },
+  "NewUser":{
+    "h1": "Welcome, new user!!",
+    "text": "Get to know a little about our page and browse through it!"
+  },
+  "Registro": {
+    "inicio": "Sign up"
+  },
+  "Login":{
+    "login": "Log In"
+  },
+  "Profile": {
+    "wlc": "WELCOME!",
+    "fav": "Your favorites"
   }
 }

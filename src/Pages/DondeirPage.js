@@ -41,10 +41,10 @@ const DondeirPage = () => {
           <img src={Barcelona} width={406} height={400}/>
         </div>
         <div className='titleCard'> 
-          <p>BARCELONA</p>
+          <p style={{marginLeft: '-130px'}}>BARCELONA</p>
           <p>{t("DondeIrP.p")}</p>
         </div>
-        <select for="Destinos" style={{width: '400px', marginTop: '20px', height: '50px', border:'3px black solid', textAlign:'center',fontSize:'20px',}} onChange={(e) => navigate(`/vuelo/${e.target.value}`)}>
+        <select for="Destinos" style={{width: '400px', marginTop: '20px', height: '50px', border:'3px black solid', textAlign:'center',fontSize:'20px',}} onChange={(e) => navigate(`/destinos/${e.target.value}`)}>
           <option disabled selected>{t("DondeIrP.option")}</option>
           <option value="1"> Madrid</option>
           <option value="2">Barcelona</option>
@@ -62,17 +62,7 @@ const DondeirPage = () => {
           <option value="14">Toledo</option>
           <option value="15">Alicante</option>
         </select>
-        <button 
-          style={{width: '400px', 
-                marginTop: '20px',
-                height: '50px', 
-                border:'3px black solid', 
-                textAlign:'center',
-                fontSize:'20px',
-                backgroundColor: 'rgb(13, 40, 53)',
-                color: 'white'
-            }}>
-          {t("DondeIrP.p2")}</button>
+        <button className='ButtonMap'>{t("DondeIrP.p2")}</button>
     </div>
     <img src={mapa} width={600} height={550} style={{marginTop: '6%'}}/>
   </div>

@@ -15,39 +15,39 @@ const QueHacerPage = ({isVisible}) => {
   return (
     isVisible && (
     <>
-      <h2>{t("QueHacer2.plans")}</h2>
+      <h2 style={{color: '#9A031E'}}>{t("QueHacer2.plans")}</h2>
       <div className='ContainerQueHacer'> 
         <div className='CardQueHacer'>
           <img src={card1} width={200} height={150}/>
-          <p style={{fontWeight:'bold', fontSize: '20px'}}>{t("QueHacer2.ac")}</p>
+          <p style={{fontWeight:'bold', fontSize: '20px', color: '#F2F5DE'}}>{t("QueHacer2.ac")}</p>
         </div>
         <div className='CardQueHacer'>
           <img src={card2} width={200} height={150}/>
-          <p style={{fontWeight:'bold', fontSize: '20px'}}>{t("QueHacer2.cp")}</p>
+          <p style={{fontWeight:'bold', fontSize: '20px', color: '#F2F5DE'}}>{t("QueHacer2.cp")}</p>
         </div>
         <div className='CardQueHacer'>
           <img src={card3} width={200} height={150}/>
-          <p style={{ fontWeight:'bold', fontSize: '20px'}}>{t("QueHacer2.tu")}</p>
+          <p style={{ fontWeight:'bold', fontSize: '20px', color: '#F2F5DE'}}>{t("QueHacer2.tu")}</p>
         </div> 
         <div className='CardQueHacer'>
           <img src={card4} width={200} height={150}/>
-          <p style={{fontWeight:'bold', fontSize: '20px'}}>{t("QueHacer2.nt")}</p>
+          <p style={{fontWeight:'bold', fontSize: '20px', color: '#F2F5DE'}}>{t("QueHacer2.nt")}</p>
         </div>
         <div className='CardQueHacer'>
           <img src={card5} width={200} height={150}/>
-          <p style={{fontWeight:'bold', fontSize: '20px'}}>{t("QueHacer2.gst")}</p>
+          <p style={{fontWeight:'bold', fontSize: '20px', color: '#F2F5DE'}}>{t("QueHacer2.gst")}</p>
         </div>
         <div className='CardQueHacer'>
           <img src={card6} width={200} height={150}/>
-          <p style={{fontWeight:'bold', fontSize: '18px'}}>{t("QueHacer2.da")}</p>
+          <p style={{fontWeight:'bold', fontSize: '18px', color: '#F2F5DE'}}>{t("QueHacer2.da")}</p>
         </div>
         <div className='CardQueHacer'>
           <img src={card7} width={200} height={150}/>
-          <p style={{fontWeight:'bold', fontSize: '20px'}}>{t("QueHacer2.cm")}</p>
+          <p style={{fontWeight:'bold', fontSize: '20px', color: '#F2F5DE'}}>{t("QueHacer2.cm")}</p>
         </div>
         <div className='CardQueHacer'>
           <img src={card8} width={200} height={150}/>
-          <p style={{fontWeight:'bold', fontSize: '20px'}}>{t("QueHacer2.rt")}</p>
+          <p style={{fontWeight:'bold', fontSize: '20px', color: '#F2F5DE'}}>{t("QueHacer2.rt")}</p>
         </div>
       </div>
     </>

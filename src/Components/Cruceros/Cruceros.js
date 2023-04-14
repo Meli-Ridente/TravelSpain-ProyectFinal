@@ -49,7 +49,7 @@ const Cruceros = () => {
             <img src={crucero.img1} className={styles.Imagen} />
             <p className={styles.Border}></p>
             <div className={styles.DatosCrucero}>
-              <Link to={`/vuelo/${crucero.id}`}><p className={styles.title}>{crucero.title}</p></Link>
+              <Link to={`/destinos/${crucero.id}`}><p className={styles.title}>{crucero.title}</p></Link>
               <p className={styles.date}>{crucero.date}</p>
               <p className={styles.price}>{crucero.price} </p>
               <p className={styles.Prime}>♦️{t("Cruceros.prime")}</p>

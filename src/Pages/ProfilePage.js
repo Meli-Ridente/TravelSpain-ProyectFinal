@@ -1,10 +1,12 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import Profile from '../Components/Profile/Profile';
 
 const ProfilePage = () => {
-  const user = useSelector((state) => state.AuthReducer.user)
+ 
   return (
-    <div>{user.id}</div>
+    <div>
+      <Profile></Profile>
+    </div>
   )
 }
 

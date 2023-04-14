@@ -6,7 +6,6 @@ import images from '../../assets/images.jpg'
 import mar from '../../assets/mar.jpg'
 import fly from '../../assets/fly.webp'
 import turista from '../../assets/turista.jpg'
-import globos from '../../assets/globos.jpg'
 import {useTranslation} from 'react-i18next'
 
 const QueHacer = () => {
@@ -15,7 +14,7 @@ const QueHacer = () => {
   <div className={styles.QueHacer}>
     <div className={styles.ContainerQueHacer}>
       <h2 className={styles.h1}>{t("QueHacer.h1")}</h2>
-      <p>{t("QueHacer.text")}</p>
+      <p>{t("QueHacer.texto")}</p>
       <div className={styles.firstContainer}>
         <div className={styles.ImgsContainer}>
           <img src={turismo} width={370} style={{margin: '5px'}}/>

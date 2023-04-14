@@ -41,5 +41,23 @@
   "Cruceros": {
     "best": "LOS MEJORES CRUCEROS PARA CONOCER ESPAÑA",
     "prime": "Precio prime por persona"
+  },
+  "Destinos":{
+    "qhacer": "¿Qué hacer en",
+    "fst": "¡Conoce sus festividades!"
+  },
+  "NewUser":{
+    "h1": "¡¡Bienvenido, Nuevo Usuario!!",
+    "text": "Conoce un poco de nuestra página y navega por ella!"
+  },
+  "Registro": {
+    "inicio": "Registrate"
+  },
+  "Login":{
+    "login": "Inicia sesion"
+  },
+  "Profile": {
+    "wlc": "¡BIENVENIDO!",
+    "fav": "Tus favoritos"
   }
 }

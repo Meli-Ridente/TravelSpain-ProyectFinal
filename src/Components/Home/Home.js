@@ -33,10 +33,7 @@ export const Home = () => {
               : '' }
           </li>
         </ul>
-        <div className={styles.Botones}>
-          <button onClick={() => i18n.changeLanguage('es')} className={styles.BotonEs}></button>
-          <button onClick={() => i18n.changeLanguage('en')} className={styles.BotonEn}></button>
-        </div>
+        
       </div>
       <img src={img} className={styles.Img}/>
       

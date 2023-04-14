@@ -3,12 +3,12 @@
     display: flex;
     position: absolute;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
     width: 100%;
     font-size: 20px;
     font-weight: bold;
     color: black;
-    background-color: rgba(255, 255, 255, 0.37);
+    background-color: #9a031f15;
     .Uls{
       display: flex;
       flex-direction: row;
@@ -20,30 +20,10 @@
           color: rgba(0, 33, 53, 0.911);
           display: inline;
         }
-        p{
+        p{    
+          color: #9A031E;
           margin: 0;
         }
-      }
-    }
-    .Botones{
-      display: flex;
-      justify-content: end;
-      align-items: center;
-      width: 50%;
-      .BotonEs{
-        width: 70px;
-        height: 50px;
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/1200px-Bandera_de_Espa%C3%B1a.svg.png');
-        background-size: cover;
-        border: none;
-        margin-right: 15px;
-      }
-      .BotonEn{
-        width: 70px;
-        height: 50px;
-        background-image: url('https://img.freepik.com/vector-premium/bandera-americana-bandera-estados-unidos_687041-10.jpg?w=2000');
-        background-size: cover;
-        border: none;
       }
     }
   }
