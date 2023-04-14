@@ -62,7 +62,9 @@ const Destinos = () => {
           return (
             <div className={styles.MyCarousel}>
               <p>{fest.title}</p>
-              <img src={fest.img} className={styles.Imagen}/>
+              <p>{fest.date}</p>
+              <img src={fest.img} className={styles.Imagen} width={200}/>
+              <p>{fest.dscp}</p>
             </div>
           )
         })}
