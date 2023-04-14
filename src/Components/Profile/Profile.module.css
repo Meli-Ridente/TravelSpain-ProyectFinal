@@ -1,0 +1,219 @@
+.Profile{
+  color: #9A031E;
+}
+
+.emailsignature1{
+  background:#9d842069;
+  font-family:Lato, sans-serif;
+  padding:50px;
+  width: 50%;
+  margin: 4% 10%;
+  box-shadow:0 0 10px rgba(0,0,0,.4);
+  position:relative;
+  z-index:1;
+  display: flex;
+  justify-content: start;
+  text-align: justify;
+}
+
+.emailsignature1:before
+{ 
+  content:"";
+  background:linear-gradient(to right,#942911 ,#90A583);
+  width:57%;
+  height:100%;
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:-1;
+}
+
+.emailsignature1 .signatureContent
+{
+  color:#fff;
+  background:#593837;
+  margin-right: 100px;
+  padding:20px
+}
+.emailsignature1 .signatureDetails
+{
+  text-align:center;
+  margin:0 0 10px;
+  display:inline-block
+}
+.emailsignature1 .Title
+{
+  font-size:24px;
+  font-weight:600;
+  text-transform:uppercase;
+  margin:0
+}
+.emailsignature1 .post
+{
+  font-size:14px
+}
+
+.emailsignature1 .innerContent
+{
+  display: flex;
+  flex-direction: column;
+  padding:0 150px 0 0;
+  margin:0;
+  list-style:none
+}
+.emailsignature1 .innerContent li
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color:#fff;
+  font-size:15px;
+  line-height:35px;
+}
+.emailsignature1 .innerContent li span
+{
+  color:#001f38;
+  background:linear-gradient(to right,#942911 ,#90A583);
+  text-align:center;
+  line-height:25px;
+  width:25px;
+  height:20px;
+  margin-right:6px;
+  border-radius:5px;
+  text-align: center;
+}
+
+.button{
+  border-radius: 10px;
+  font-size: 15px;
+  width: 150px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background:linear-gradient(to right,#942911 ,#90A583);
+}
+
+a{
+  text-decoration: none;
+}
+
+.emailsignature1 .SignatureImg{
+  background:#90A583;
+  width:160px;
+  height:160px;
+  padding:7px;
+  overflow:hidden;
+  transform:translateY(-50%);
+  position:absolute;
+  top:50%;
+  right:13%;
+  z-index:1
+}
+.emailsignature1 .SignatureImg img
+{
+  width:100%;
+  height: 100%;
+}
+.emailsignature1 .icon
+{
+  padding:0;
+  margin:0;
+  list-style:none;
+  transform:translateY(-50%);
+  position:absolute;
+  top:50%;
+  right:20px
+}
+.emailsignature1 .icon li a
+{
+  color:#f01c4e;
+  background:#fff;
+  font-size:18px;
+  text-align:center;
+  line-height:30px;
+  width:30px;
+  height:30px;
+  margin:15px 0;
+  border-radius:50%;
+  display:block;
+  transition:all .3s ease 0s
+}
+.emailsignature1 .icon li a:hover
+{
+  color:#fff;
+  background:#f01c4e;
+  text-decoration:
+  none;box-shadow:0 0 10px #fff
+}
+@media screen and (max-width:767px)
+{
+  .emailsignature1 .signature-img{right:17%}
+}
+@media screen and (max-width:576px)
+{.emailsignature1
+  {
+    padding:17px
+
+  }
+  .emailsignature1:before
+  {
+    width:100%;
+    height:50%;
+    top:auto;bottom:0
+  }
+  .emailsignature1 .signatureContent
+  {
+    text-align:center;
+    width:100%;
+    padding:20px 10px 50px
+  }
+  .emailsignature1 .innerContent
+  {
+    padding:0
+  }
+  .emailsignature1 .innerContent li
+  {
+    line-height:40px
+  }
+  .emailsignature1 .SignatureImg
+  {
+    margin:0 auto;
+    transform:translateY(0);
+    position:relative;
+    right:0;top:-35px
+  }
+  .emailsignature1 .icon
+  {
+    text-align:center;
+    transform:translateY(0) translatex(50%);
+    top:auto;
+    bottom:10px;
+    right:50%
+  }
+  .emailsignature1 .icon li
+  {
+    display:inline-block
+  }
+  .emailsignature1 .icon li a
+  {
+    margin:0 5px 0
+  }
+}
+
+.h2{
+  text-align: start;
+  font-size: 30px;
+  text-decoration: underline;
+  margin-left: 20%;
+}
+.CardFavorites{
+  display: flex;
+  color: black;
+  font-weight: bold;
+  font-size: 19px;
+  width: 50%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}

@@ -9,16 +9,17 @@
     justify-content: space-evenly;
     
     .Img{
+      margin-top: 20px;
       width: 45%;
       height: 500px;
       border-radius: 40px;
-      border: 3px dashed #0a8af3;
+      border: 3px dashed #3E885B;
     }
   }
   .DivBuscador{
     left: 70%;
     top:15%;
-    border-radius: 1px dashed black;
+    border-radius: 1px dashed #3E885B;
     p{
       font-size: 20px;
       color: red;
@@ -37,7 +38,7 @@
   h1{
     @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dancing+Script:wght@700&family=Permanent+Marker&family=Playfair+Display:ital@0;1&display=swap');
     font-family: 'Playfair Display', serif;
-    color: black;
+    color: #3E885B;
     margin: 20px;
   }
   .First{
