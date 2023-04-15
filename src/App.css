@@ -64,23 +64,23 @@
 
 .Botones{
   position: absolute;
-  left: 92%;
+  left: 90%;
   display: flex;
   flex-direction: row;
   justify-content: end;
 }
 
 .BotonEn{
-  width: 70px;
-  height: 50px;
+  width: 60px;
+  height: 40px;
   background-image: url('https://img.freepik.com/vector-premium/bandera-americana-bandera-estados-unidos_687041-10.jpg?w=2000');
   background-size: cover;
   border: none;
 }
 
 .BotonEs{
-  width: 70px;
-  height: 50px;
+  width: 60px;
+  height: 40px;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/1200px-Bandera_de_Espa%C3%B1a.svg.png');
   background-size: cover;
   border: none;

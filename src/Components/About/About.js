@@ -1,8 +1,9 @@
-import React , {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
+import React , {useEffect} from 'react';
 import styles from './About.module.css';
 import { getAbout } from '../../store/info/action';
 import {useDispatch, useSelector} from 'react-redux'
+import {Link} from 'react-router-dom'
+import {RightOutlined} from '@ant-design/icons'
 import { Spin } from 'antd';
 import avatar from '../../assets/avatar.webp'
 import {useTranslation} from 'react-i18next'
@@ -23,7 +24,8 @@ const About = () => {
   }
 
   return (
-    <div className={styles.About}>  
+    <div className={styles.About}> 
+    <span className={styles.link}><Link to='/comentarios'><RightOutlined className={styles.icon}/>{t("About.comments")}</Link></span>  
     <div className={styles.Title}>
       <h2>{t("About.abt")}</h2>
     </div>
@@ -33,9 +35,9 @@ const About = () => {
       <img src={avatar}className={styles.IMG}/>
       {about.map((ab) => 
         <div className={styles.CardDatos}>
-          <h1>{ab?.title}</h1>
+          <h1 className={styles.name}>{ab?.name}</h1>
+          <h2>{ab?.title}</h2>
           <h2 style={{fontWeight:'bold'}}>{ab?.subtitle}</h2>
-          <h2 className={styles.name}>{ab?.name}</h2>
         </div>
       )}
     </div>

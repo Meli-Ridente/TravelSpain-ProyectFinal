@@ -61,6 +61,11 @@
     "fav": "Tus favoritos"
   },
   "About":{
-    "abt": "Sobre nosotros"
+    "abt": "Sobre nosotros",
+    "comments": "COMENTARIOS DE USUARIOS"
+  },
+  "Comments":{
+    "btn": "ENVIAR",
+    "com": "Tu comentario es muy importante para nosotros!"
   }
 }

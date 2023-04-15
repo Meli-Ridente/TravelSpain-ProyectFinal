@@ -31,7 +31,7 @@
   padding: 2rem  1.5rem;
   width: 80%;
   left: 3%;
-  max-width: 500px;
+  max-width: 400px;
 }
 .containerGlass::before,
 .containerGlass::after {
@@ -99,16 +99,16 @@
 }
 
 .CardDatos{
-  color: #9A031E;;
+  color: #9A031E;
   background-color: #f2f5deab;
   position: absolute;
   padding: 15px;
   border-radius: 10px;
-  top: 32%;
+  top: 35%;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: 5px solid #f2f5defd;
   transition: transform .2s; 
-  left: 48%;
+  left: 45%;
 }
 
 .CardDatos:hover{
@@ -118,11 +118,31 @@
 .name{
   font-weight: bold;
   font-size: 22px;
+  color: #9A031E;
+  letter-spacing:1px;
+  text-transform: uppercase;
+}
+
+.link{
+  position: absolute;
+  top: 27%;
+  letter-spacing:1px;
+  left: 50%;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.link:hover{
+  box-shadow: 0px 0px 9px 2px  #9a031f79;
+}
+
+.icon{
+  font-size: 12px;
 }
 
 .IMG{
-  width: 200px;
+  width: 150px;
   position: absolute;
-  top: 21.8%;
-  left: 39%;
+  top: 20%;
+  left: 36%;
 }

@@ -1,14 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useRef } from 'react';
 import styles from './Comentarios.module.scss';
 import { setComment } from '../../store/info/action';
 import { Button, Spin} from 'antd';
 import { getComments } from '../../store/info/action';
 import { useDispatch, useSelector } from 'react-redux';
+import {useTranslation} from 'react-i18next'
+
 
 const Comentarios = () => {
   const dispatch = useDispatch()
   const inputComment = useRef('')
+  const [t, i18n] = useTranslation("global")
   const {comments, loadingComments} = useSelector((state) => state.VuelosReducer)
 
   useEffect(() =>{
@@ -28,15 +30,19 @@ const Comentarios = () => {
   
   return(
     <div className={styles.Comentarios}>
-      <input ref={inputComment}></input>
-      <Button type="primary" htmlType="submit" onClick={() => addComment()}>Submit</Button> 
-      <div className={styles.First}>
+      <h3 className={styles.h3}>{t("Comments.com")}</h3>
+      <div className={styles}>
         {comments?.map((cm) =>
-          <div>
-            {cm?.info}
-          </div>
+          <table className={styles.tabla}>
+          <p>👤</p><tr>
+              <td>{cm?.info}</td>
+            </tr>
+          </table>
         )}
       </div>
+      
+      <input ref={inputComment} className={styles.input}></input>
+      <Button type="primary" htmlType="submit" onClick={() => addComment()}>{t("Comments.btn")}</Button> 
     </div>
   )
 };
