@@ -43,7 +43,7 @@ const Vuelos = () => {
       <input className={styles.Buscador} type='text' placeholder='Busca tu vuelo' onChange={handleChange}></input>
       <div className={styles.promos}>
         <img src={fuego} width={50} height={100}/>
-        <p>{t("Vuelos.no")} <Link to='/ofertas'>{t("Vuelos.promos")}</Link></p>
+        <p>{t("Vuelos.no")} <Link to='/ofertas' className={styles.link}>{t("Vuelos.promos")}</Link></p>
       </div>
     </div>
     {filter.map((vuelo) => 

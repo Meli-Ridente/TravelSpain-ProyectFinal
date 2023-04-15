@@ -10,13 +10,26 @@ import {
   GET_VUELO_FAIL,
   GET_CRUCERO,
   GET_CRUCERO_OK,
-  GET_CRUCERO_FAIL
+  GET_CRUCERO_FAIL,
+  GET_ABOUT,
+  GET_ABOUT_OK,
+  GET_ABOUT_FAIL,
+  SET_COMMENT,
+  SET_COMMENT_OK,
+  SET_COMMENT_FAIL,
+  GET_COMMENT,
+  GET_COMMENT_OK,
+  GET_COMMENT_FAIL
 } from './actionType'
 
 const initialState = {
   vuelos: [],
   loadingVuelos: false,
   ofertas: [],
+  loadingComments: false,
+  comments: [],
+  loadingAbout: false,
+  about: [],
   loadingOfertas: false,
   vuelo: {},
   loadingVuelo: false,
@@ -54,6 +67,7 @@ export default function VuelosReducer(state = initialState, action){
     
     case GET_OFERTAS_FAIL:
       state = {...state, loadingOfertas: false, ofertas:[]}
+      break
 
 
     case GET_VUELO:
@@ -66,7 +80,7 @@ export default function VuelosReducer(state = initialState, action){
 
     case GET_VUELO_FAIL:
       state = {...state, loadingVuelo: false, vuelo: {}, error: {message: action.payload}}
-
+      break
 
 
     case GET_CRUCERO:
@@ -79,8 +93,45 @@ export default function VuelosReducer(state = initialState, action){
 
     case GET_CRUCERO_FAIL:
       state = {...state, loadingCruceros: false, cruceros:{}, error: {message: action.payload}}
+      break
+    
+    case GET_ABOUT:
+      state = {...state, loadingAbout: true}
+      break
 
+    case GET_ABOUT_OK:
+      state = {...state, loadingAbout: false, about: action.payload}
+      break
+
+    case GET_ABOUT_FAIL:
+      state = {...state, loadingAbout: false, about:{}, error: {message:action.payload}}
+      break
+
+
+    case SET_COMMENT:
+      state = {...state, loadingComment: true}
+      break
+
+    case SET_COMMENT_OK:
+      state = {...state, loadingComment: false, comments: [...state.comments, action.payload]}
+      break
+
+    case SET_COMMENT_FAIL:
+      state = {...state, loadingComment: false, comments:[], error: {message: action.payload}}
+      break
       
+
+    case GET_COMMENT:
+      state = {...state, loadingComments: true}
+      break
+
+    case GET_COMMENT_OK:
+      state = {...state, loadingComments: false, comments: action.payload}
+      break
+      
+    case GET_COMMENT_FAIL:
+      state = {...state, loadingComments: false, comments:[], error: {message: action.payload}}
+
     default:
       break
   }

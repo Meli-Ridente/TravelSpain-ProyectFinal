@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import styles from './Registro.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Checkbox, Form, Input , Spin} from 'antd';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { addUserNew } from '../../store/auth/action';
 import { setUserLogin } from '../../store/auth/action';
 import {useTranslation} from 'react-i18next'
