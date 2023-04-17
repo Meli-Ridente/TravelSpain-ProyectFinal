@@ -10,13 +10,14 @@
     .Header{
       text-align: justify;
       .PRIME{
+        margin-top: 30px;
         font-weight: bold;
         font-size: xx-large;
-        margin-bottom: -48px;
+        margin-bottom: -18px;
       }
       .MejoresOf{
         font-size: xx-large;
-        margin-bottom: -15px;
+        margin-top: 10px;
       }
       .Red{
         color: rgb(255, 91, 42);
@@ -70,9 +71,6 @@
         flex-direction: column;
         justify-content: space-around;
         align-content: end;
-        p{
-          margin: 0px;
-        }
         .price{
           font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
           font-size: 30px;

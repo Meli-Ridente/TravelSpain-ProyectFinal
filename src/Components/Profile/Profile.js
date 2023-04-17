@@ -15,12 +15,12 @@ const Profile = () => {
   useEffect(() => {
     if(user === undefined)
       navigate('/login')
-  },[]) //tenia user dentro de []
+  },[user]) //tenia user dentro de []
 
   return (
   <div className={styles.Profile}>
     <div class={styles.container}>
-	    <h1 class={styles.textCenter}>{t("Profile.wlc")} {user.name}</h1>
+	    <h1 class={styles.textCenter}>{t("Profile.wlc")}</h1>
 	      <div style={{width: '50%', alignSelf:'center'}}>
           <div style={{width: '100%'}}>
             <div class={styles.emailsignature1}>
@@ -30,10 +30,10 @@ const Profile = () => {
                   <span class={styles.post}>{user?.edad}</span>
                 </div>
                 <ul class={styles.innerContent}>
-                    <li><EnvironmentOutlined />{user?.address}</li>
-                    <li><PhoneOutlined />{user?.phone}</li>
-                    <li><MailOutlined />{user?.email}</li>
-                    <button className={styles.button} onClick={() => setShowFavorites(!showFavorites)}><HeartOutlined />{t("Profile.fav")}</button>
+                  <li><EnvironmentOutlined />{user?.address}</li>
+                  <li><PhoneOutlined />{user?.phone}</li>
+                  <li><MailOutlined />{user?.email}</li>
+                  <button className={styles.button} onClick={() => setShowFavorites(!showFavorites)}><HeartOutlined /></button>
                 </ul>
               </div>
               <div class={styles.SignatureImg}>
@@ -46,11 +46,11 @@ const Profile = () => {
     <h2 className={styles.h2}>{t("Profile.fav")}</h2>
     {showFavorites ? 
       <div className={styles.CardFavorites}>
-        {user?.favorites.map((fav) => {
+        {user.favorites?.map((fav) => {
           return (
-            <div className={styles.MyCarousel}>
-              <p>{fav.title}</p>
-              <p>{fav.info}</p>
+            <div className={styles.MyDatos}>
+              <p className={styles.texto1}>{fav.title}</p>
+              <p className={styles.texto}>{fav.info}</p>
               <img src={fav.img1} width={200}/>
             </div>
           )

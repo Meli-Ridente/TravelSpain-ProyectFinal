@@ -27,15 +27,15 @@ const Login = () => {
   }
 
   function tryLogin(){
-
     const users = user.find((users) => users.email ===email && users.password ===password);
     if(users){
       dispatch(setUserLogin(users))
       navigate('/profile')
     }
     else
-      alert('Usuario no registrado')
+      alert('Datos incorrectos')
   }
+
   return (
     <div className={styles.Login}>
       <h1>{t("Login.login")}</h1>
@@ -111,9 +111,9 @@ const Login = () => {
         </Form>
       </div>
     <div className={styles.Registro}>
-        <h4>¿No eres usuario?</h4>
-        <Link to='/registro'>Registrate</Link>
-      </div>
+      <h4>¿No eres usuario?</h4>
+      <Link to='/registro'>Registrate</Link>
+    </div>
   </div>
   )
 };

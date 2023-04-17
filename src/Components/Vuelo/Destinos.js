@@ -53,7 +53,7 @@ const Destinos = () => {
       </div> 
       
     </div>
-    <h1>{t("Destinos.qhacer")} {vuelo.title}? {t("Destinos.fst")}</h1>
+    <h1 style={{color: '#9A031E'}}>{t("Destinos.qhacer")} {vuelo.title}? {t("Destinos.fst")}</h1>
     <Button shape="round" onClick={() => carousel?.current?.next()} className={styles.Buttons}>NEXT</Button>
     <Button shape="round" onClick={() => carousel?.current?.prev()} className={styles.Buttons}>PREV</Button>
     <div className={styles.Container}>
@@ -61,10 +61,10 @@ const Destinos = () => {
         {vuelo.festividad?.map((fest) => {
           return (
             <div className={styles.MyCarousel}>
-              <p>{fest.title}</p>
-              <p>{fest.date}</p>
+              <p className={styles.Title}>{fest.title}</p>
+              <p className={styles.texto}>{fest.date}</p>
               <img src={fest.img} className={styles.Imagen} width={200}/>
-              <p>{fest.dscp}</p>
+              <p className={styles.description} >{fest.dscp}</p>
             </div>
           )
         })}

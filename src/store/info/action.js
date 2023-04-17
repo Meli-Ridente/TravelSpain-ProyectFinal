@@ -12,7 +12,19 @@ import {
   GET_VUELO_FAIL,
   GET_CRUCERO,
   GET_CRUCERO_OK,
-  GET_CRUCERO_FAIL
+  GET_CRUCERO_FAIL,
+  GET_ABOUT,
+  GET_ABOUT_OK,
+  GET_ABOUT_FAIL,
+  SET_COMMENT,
+  SET_COMMENT_OK,
+  SET_COMMENT_FAIL,
+  GET_COMMENT,
+  GET_COMMENT_OK,
+  GET_COMMENT_FAIL,
+  DELETE_USER,
+  DELETE_USER_OK,
+  DELETE_USER_FAIL
 } from './actionType'
 
 export function actionGetVuelos() {
@@ -102,7 +114,7 @@ export function actionGetVueloOk(vueloId){
 
 export function actionGetVueloFail(error){
   return{
-    type: GET_OFERTAS_FAIL,
+    type: GET_VUELO_FAIL,
     payload: error
   }
 }
@@ -156,3 +168,111 @@ export function getCruceros(){
     }
   }
 }
+
+        //ABOUT
+
+
+export function actionGetAbout(){
+  return{
+    type: GET_ABOUT
+  }
+}
+
+export function actionGetAboutOk(datos){
+  return{
+    type: GET_ABOUT_OK,
+    payload: datos
+  }
+}
+
+export function actionGetAboutFail(error){
+  return{
+    type: GET_ABOUT_FAIL,
+    payload: error
+  }
+}
+
+export function getAbout(){
+  return async (dispatch) => {
+    dispatch(actionGetAbout())
+    try{
+      const response = await axios.get('http://localhost:8765/about')
+      dispatch(actionGetAboutOk(response.data))
+    }catch(error){
+      dispatch(actionGetAboutFail(error))
+    }
+  }
+}
+
+//     SET COMMENTS
+
+
+export function actionSetComment(){
+  return {
+    type: SET_COMMENT
+  }
+}
+
+export function actionSetCommentOk(comment){
+  return{
+    type: SET_COMMENT_OK,
+    payload: comment
+  }
+}
+
+export function actionSetCommentFail(error){
+  return{
+    type: SET_COMMENT_FAIL,
+    payload: error
+  }
+}
+
+export function setComment(comment){
+  return async (dispatch) =>{
+    dispatch(actionSetComment(comment))
+    try{
+      const response = await axios.post('http://localhost:8765/Comments', comment)
+      dispatch(actionSetCommentOk(response.data))
+    }catch(error){
+      dispatch(actionSetCommentFail(error))
+    }
+  }
+}
+
+
+//    GET COMMENTS
+
+export function actionGetComment(){
+  return{
+    type: GET_COMMENT
+  }
+}
+
+export function actionGetCommentOk(comments){
+  return{
+    type: GET_COMMENT_OK,
+    payload: comments
+  }
+}
+
+export function actionGetCommentFail(error){
+  return {
+    type: GET_COMMENT_FAIL,
+    payload: error
+  }
+}
+
+export function getComments() {
+  return async (dispatch) => {
+    dispatch(actionGetComment())
+    try{
+      const response = await axios.get('http://localhost:8765/Comments')
+      dispatch(actionGetCommentOk(response.data))
+    }catch(error){
+      dispatch(actionGetCommentFail(error))
+    }
+  }
+}
+
+
+ 

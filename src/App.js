@@ -12,24 +12,24 @@ import Ofertas from './Components/Ofertas/Ofertas';
 import Registro from './Components/Registro/Registro';
 import NewUser from './Components/NewUser/NewUser';
 import { useSelector } from 'react-redux';
+import Comentarios from './Components/Comentarios/Comentarios';
 import ProfilePage from './Pages/ProfilePage'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faHouse, faPlane, faShip, faUserPlus, faUser, faUserSecret } from '@fortawesome/free-solid-svg-icons'
+
 
 function App() {
-
-  //NECESITO SABER COMO HACER QUE EL USERS QUE ESTA EN EL FIND LO TRAIGO ACA PARA VALIDAR QUE EXISTE EL USUARIO.
   const user = useSelector((state) => state.AuthReducer.userLogin)
   return (
     <div className="App">
       <Header />
       <div className='AppContainer'>
         <div className='Links'>
-          <Link to='/' style={{margin: '20px'}}>🏠</Link>
-          <Link to='/vuelos' style={{margin: '20px'}}>✈️</Link>
-          <Link to='/cruceros' style={{margin: '20px'}}>🚢</Link>
-          {/* <Link to='/login' style={{margin: '20px'}}>👤</Link> */}
-          {user  ? '' : <Link to='/login' className='link' >👤</Link> } 
-          {user !== undefined ? <Link to='/profile' className='link'>🐻</Link>  : '' }
-          
+          <Link to='/' style={{margin: '20px'}}><FontAwesomeIcon icon={faHouse} className='icons'/></Link>
+          <Link to='/vuelos' style={{margin: '20px'}}><FontAwesomeIcon icon={faPlane} className='icons'/></Link>
+          <Link to='/cruceros' style={{margin: '20px'}}><FontAwesomeIcon icon={faShip} className='icons'/></Link>
+          {user ? '' : <Link to='/login' className='link' style={{margin: '20px'}}><FontAwesomeIcon icon={faUserPlus} className='icons'/></Link> }
+          {user !== undefined ?  <Link to='/profile' className='link' style={{margin: '20px'}}><FontAwesomeIcon icon={faUser} className='icons'/></Link> : ''}
         </div>
         <Routes>
           <Route exact path='/' element={<HomePage />} ></Route>
@@ -39,10 +39,9 @@ function App() {
           <Route exact path='/ofertas' element={<Ofertas />} ></Route>
           <Route exact path='/login' element={<LoginPage/>}></Route>
           <Route exact path='/profile' element={<ProfilePage/>}></Route>
-          <Route exact path='/profile' element={user !== undefined ? <ProfilePage /> : <Navigate to='/login' replace />}></Route>
           <Route exact path='/about' element={<About/>} ></Route>
           <Route exact path='/registro' element={<Registro/>} ></Route>
-          <Route exact path='/newuser' element={user !== undefined ? <NewUser /> : <Navigate to='/registro' replace />}></Route>
+          <Route exact path='/comentarios' element={<Comentarios />}></Route>
         </Routes>
       </div>
       

@@ -59,28 +59,28 @@
   align-items: center;
   height: 80px;
   color: white;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .Botones{
   position: absolute;
-  left: 92%;
+  left: 90%;
   display: flex;
   flex-direction: row;
   justify-content: end;
 }
 
 .BotonEn{
-  width: 70px;
-  height: 50px;
+  width: 60px;
+  height: 40px;
   background-image: url('https://img.freepik.com/vector-premium/bandera-americana-bandera-estados-unidos_687041-10.jpg?w=2000');
   background-size: cover;
   border: none;
 }
 
 .BotonEs{
-  width: 70px;
-  height: 50px;
+  width: 60px;
+  height: 40px;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/1200px-Bandera_de_Espa%C3%B1a.svg.png');
   background-size: cover;
   border: none;
@@ -134,24 +134,24 @@
   margin: 10px;
 }
 
-
-
 .Links{
   display: flex;  
   width: 60px;
   flex-direction: column;
-  justify-content: flex-start;
-  margin-right: 5%;
-  top: 20%;
+  top: 22%;
+  padding: 1% 0;
   border-radius: 20px;
-  color: black;
   position: fixed;
   transition: 1s;
   background:linear-gradient(to right, #6b5e6254 , #c9f0ffe3);
 }
 
-a:hover{
-  text-shadow: 3px 5px 9px #61dafb;
+a{
+  color: #9A031E;
+}
+
+.icons:hover{
+  box-shadow: 0px 0px 15px 0px#9a031fa8;
 }
 
 .Links:hover{
