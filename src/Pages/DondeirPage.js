@@ -62,7 +62,7 @@ const DondeirPage = () => {
           <option value="14">Toledo</option>
           <option value="15">Alicante</option>
         </select>
-        <button className='ButtonMap'>{t("DondeIrP.p2")}</button>
+        {/* <button className='ButtonMap'>{t("DondeIrP.p2")}</button> */}
     </div>
     <img src={mapa} width={600} height={550} style={{marginTop: '6%'}}/>
   </div>
