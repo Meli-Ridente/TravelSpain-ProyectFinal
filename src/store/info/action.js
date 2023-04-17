@@ -21,7 +21,10 @@ import {
   SET_COMMENT_FAIL,
   GET_COMMENT,
   GET_COMMENT_OK,
-  GET_COMMENT_FAIL
+  GET_COMMENT_FAIL,
+  DELETE_USER,
+  DELETE_USER_OK,
+  DELETE_USER_FAIL
 } from './actionType'
 
 export function actionGetVuelos() {
@@ -189,7 +192,7 @@ export function actionGetAboutFail(error){
   }
 }
 
-export function getAbout(datos){
+export function getAbout(){
   return async (dispatch) => {
     dispatch(actionGetAbout())
     try{
@@ -254,7 +257,7 @@ export function actionGetCommentOk(comments){
 
 export function actionGetCommentFail(error){
   return {
-    type: GET_ABOUT_FAIL,
+    type: GET_COMMENT_FAIL,
     payload: error
   }
 }
@@ -270,3 +273,6 @@ export function getComments() {
     }
   }
 }
+
+
+ 

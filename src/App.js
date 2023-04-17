@@ -28,9 +28,8 @@ function App() {
           <Link to='/' style={{margin: '20px'}}><FontAwesomeIcon icon={faHouse} className='icons'/></Link>
           <Link to='/vuelos' style={{margin: '20px'}}><FontAwesomeIcon icon={faPlane} className='icons'/></Link>
           <Link to='/cruceros' style={{margin: '20px'}}><FontAwesomeIcon icon={faShip} className='icons'/></Link>
-          {user  ? '' : <Link to='/login' className='link' style={{margin: '20px'}}><FontAwesomeIcon icon={faUserPlus} className='icons'/></Link> } 
-          {(user && user?.password === undefined) ? <Link to='/newuser' className='link' style={{margin: '20px'}}><FontAwesomeIcon icon={faUserSecret} className='icons'/></Link> : ''}
-          {user?.password !== undefined ? <Link to='/profile' className='link' style={{margin: '20px'}}><FontAwesomeIcon icon={faUser} className='icons'/></Link> : ''}
+          <Link to='/login' className='link' style={{margin: '20px'}}><FontAwesomeIcon icon={faUserPlus} className='icons'/></Link> 
+          {user ? <Link to='/profile' className='link' style={{margin: '20px'}}><FontAwesomeIcon icon={faUser} className='icons'/></Link> : ''}
         </div>
         <Routes>
           <Route exact path='/' element={<HomePage />} ></Route>
@@ -39,11 +38,10 @@ function App() {
           <Route exact path='/destinos/:id' element={<Destinos />} ></Route>
           <Route exact path='/ofertas' element={<Ofertas />} ></Route>
           <Route exact path='/login' element={<LoginPage/>}></Route>
-          <Route exact path='/profile' element={<ProfilePage/>}></Route>
-          <Route exact path='/profile' element={user !== undefined ? <ProfilePage /> : <Navigate to='/login' replace />}></Route>
+          {user ? <Route exact path='/profile' element={<ProfilePage/>}></Route> : ''}
           <Route exact path='/about' element={<About/>} ></Route>
           <Route exact path='/registro' element={<Registro/>} ></Route>
-          <Route exact path='/newuser' element={(user?.password === undefined && user) ? <NewUser /> : <Navigate to='/login' replace />}></Route>
+          {/* <Route exact path='/newuser' element={(user?.password === undefined && user) ? <NewUser /> : <Navigate to='/login' replace />}></Route> */}
           <Route exact path='/comentarios' element={<Comentarios />}></Route>
         </Routes>
       </div>

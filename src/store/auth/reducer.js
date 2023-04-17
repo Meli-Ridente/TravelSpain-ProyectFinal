@@ -8,11 +8,14 @@ import {
   SET_FAVORITE_FAIL,
   ADD_USER,
   ADD_USER_OK,
-  ADD_USER_FAIL
+  ADD_USER_FAIL,
+  DELETE_USER,
+  DELETE_USER_OK,
+  DELETE_USER_FAIL
 }from './actionType'
 
 const initialState = {
-  user: {},
+  user: [],
   favorite: {},
   loadingFavorite: false,
   userLogin: undefined,
@@ -34,7 +37,7 @@ export default function AuthReducer(state = initialState, action){
 
 
     case GET_USER_FAIL:
-      state = {...state, loadingUser: false, user:{}, error:{message: action.payload}}
+      state = {...state, loadingUser: false, user:[], error:{message: action.payload}}
       break
 
     case SET_USER_LOGIN:
@@ -58,13 +61,25 @@ export default function AuthReducer(state = initialState, action){
       break
 
     case ADD_USER_OK: 
-      state = {...state, loadingUser: false, user: action.payload}
+      state = {...state, loadingUser: false, userLogin: action.payload, user: [...state.user, action.payload]}
       break
 
     case ADD_USER_FAIL:
       state= {...state, loadingUser: false, error:{message: action.payload}}
       break
-    
+
+    case DELETE_USER:
+      state = {...state, user: []}
+      break
+
+    case DELETE_USER_OK:
+      state = {...state, user: action.payload}
+      break
+
+    case DELETE_USER_FAIL:
+      state = {...state, user:[], error:{message: action.payload}}
+      break
+      
     default:
       break
   }

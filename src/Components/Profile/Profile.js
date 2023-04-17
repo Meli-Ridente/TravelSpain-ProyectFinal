@@ -15,7 +15,7 @@ const Profile = () => {
   useEffect(() => {
     if(user === undefined)
       navigate('/login')
-  },[]) //tenia user dentro de []
+  },[user]) //tenia user dentro de []
 
   return (
   <div className={styles.Profile}>

@@ -19,7 +19,7 @@ import {
   SET_COMMENT_FAIL,
   GET_COMMENT,
   GET_COMMENT_OK,
-  GET_COMMENT_FAIL
+  GET_COMMENT_FAIL,
 } from './actionType'
 
 const initialState = {
@@ -33,6 +33,7 @@ const initialState = {
   loadingOfertas: false,
   vuelo: {},
   loadingVuelo: false,
+  item: [],
   cruceros: [],
   loadingCruceros: [],
   error: {
@@ -131,6 +132,7 @@ export default function VuelosReducer(state = initialState, action){
       
     case GET_COMMENT_FAIL:
       state = {...state, loadingComments: false, comments:[], error: {message: action.payload}}
+      break
 
     default:
       break

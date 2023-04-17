@@ -10,7 +10,10 @@ import {
   SET_FAVORITE_FAIL,
   ADD_USER,
   ADD_USER_OK,
-  ADD_USER_FAIL
+  ADD_USER_FAIL,
+  DELETE_USER,
+  DELETE_USER_OK,
+  DELETE_USER_FAIL
 }from './actionType'
 
 export function actionGetUser(userData){
@@ -33,6 +36,8 @@ export function actionGetUserFail(error){
     payload: error
   }
 }
+
+//User LOGIN
 
 export function actionUserLogin(userLogin){
   return{
@@ -125,3 +130,38 @@ export function addFavorites(userLogin){
       }
     }
   }
+
+
+         // DELETE USER
+
+export function actionDeleteUser(){
+  return {
+    type: DELETE_USER
+  }
+}
+
+export function actionDeleteUserOk(user){
+  return{
+    type: DELETE_USER_OK,
+    payload: user
+  }
+}
+
+export function actionDeleteUserFail(error){
+  return{
+    type: DELETE_USER_FAIL,
+    payload: error
+  }
+}
+
+export function deleteUser(user){
+  return async (dispatch) => {
+    dispatch(actionDeleteUser())
+    try{
+      const response = await axios.delete('http://localhost:8765/users', user)
+      dispatch(actionDeleteUserOk(response.data))
+    }catch(error){
+      dispatch(actionDeleteUserFail(error))
+    }
+  }
+}

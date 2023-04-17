@@ -25,3 +25,4 @@ export const SET_COMMENT_FAIL = 'SET_COMMENT_FAIL'
 export const GET_COMMENT = 'GET_COMMENT'
 export const GET_COMMENT_OK = 'GET_COMMENT_OK'
 export const GET_COMMENT_FAIL = 'GET_COMMENT_FAIL'
+
